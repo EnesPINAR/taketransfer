@@ -1,0 +1,660 @@
+li {
+    list-style: none;
+}
+
+ul.child {
+    display: none;
+    padding: 0;
+}
+
+.driver_content .terms {
+    display: flex !important;
+    flex-direction: row !important;
+}
+
+.driver_content .terms p {
+    width: 100%;
+}
+
+.driver_content .terms input {
+    width: 30px !important;
+}
+
+/*Buttons*/
+.button_transparent {
+    background: transparent;
+    border: none;
+}
+
+.button_main {
+  background: var(--main);
+  color: var(--secondary);
+  border: none;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  white-space: nowrap;
+  width: max-content;
+}
+
+.button_quick_comment {
+    background: var(--lightgray);
+    border: none;
+    border-radius: 1rem;
+    padding: 0.5em;
+    white-space: nowrap;
+}
+
+.button_quick_comment:hover {
+    background: var(--lightgray-hovered);
+    transition: var(--main-transition);
+}
+
+.button_get_offers {
+    background: var(--green);
+    border: none;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    color: var(--secondary);
+    text-transform: uppercase;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.2),0 2px 2px rgba(0,0,0,0.14),0 3px 1px -2px rgba(0,0,0,0.12);
+}
+
+.button_edit {
+  background: var(--main);
+  border: none;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+}
+
+.button_mobile_add {
+  display: none;
+}
+
+@media (max-width: 575.98px) {
+  .button_mobile_add {
+    display: block;
+    background: var(--green);
+    border: none;
+    border-radius: 100%;
+    padding: 0.5rem 0.5rem;
+    color: var(--secondary);
+    position: absolute;
+    bottom: 6rem;
+    right: 2rem;
+    height: 3rem;
+    width: 3rem;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.2),0 2px 2px rgba(0,0,0,0.14),0 3px 1px -2px rgba(0,0,0,0.12);
+  }
+}
+
+
+
+
+
+
+
+/*Variables*/
+:root {
+    /*colors*/
+    --main: rgb(0, 80, 228); /*the main color of theme*/
+    --secondary: rgb(230, 230, 230); /*secondary color of theme (texts, headings etc.)*/
+    --main-hovered: rgba(0, 80, 228, 0.1);
+    --main-semi-transparent: rgba(0, 80, 228, 0.25);
+    --green: #21ba45;
+    --green-hovered: rgba(33, 186, 69, 0.932);
+    --gray: #666;
+    --lightgray: #e0e0e0;
+    --lightgray-hovered: #d6d6d6;
+    --line: rgba(0, 0, 0, 0.25);
+    --golden: #ffeb3b;
+    /*transitions*/
+    --main-transition: 300ms all;
+}
+
+p {
+    margin: 0 !important;
+}
+
+.driver_content {
+    display: flex;
+    width: 100%;
+}
+.driver_content table{
+    -webkit-box-shadow: 0px 2px 11px 0px rgba(0,0,0,0.45); 
+    box-shadow: 0px 2px 11px 0px rgba(0,0,0,0.45);
+    margin: 16px;
+    
+}
+
+.driver_content table thead tr {
+    white-space: nowrap;
+    font-size: 12px;
+    border-bottom: rgba(0,0,0,0.12) 1px solid;
+    text-align: left;
+}
+.driver_content table thead tr th {
+    padding: 7px 16px;
+}
+
+.driver_content table tbody tr {
+    
+}
+.driver_content table tbody tr td {
+    white-space: nowrap;
+    padding: 7px 16px;
+    font-size: 14px;
+}
+.driver_content table tbody tr td.transfer_comment svg {
+    margin-right: 10px;
+}
+.driver_content table tbody tr td.transfer_button button {
+    border: none;
+    border-radius: 20px;
+    background: #21ba45;
+    color: #fff;
+    padding: 5px 15px;
+    transition: 200ms all;
+}
+.driver_content table tbody tr td.transfer_button button:hover {
+    background: #21ba45ce;
+}
+
+.transfers_filter {
+    margin-left: 20px !important;
+}
+
+.transfer_box_mobile {
+    margin: 16px;
+    border-radius: 10px;
+}
+.transfer_features {
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 0;
+}
+.transfers_mobile .transfer_button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.transfers_mobile .transfer_button button {
+    width: 95%;
+    border-radius: 20px;
+    background: #21ba45;
+    color: #fff;
+    border: none;
+    padding: 5px 0;
+
+}
+
+
+
+/*trips*/
+
+.driver_content table tbody tr td .transfer_status {
+    padding: 2px 5px; 
+    background: rgb(177, 0, 0); 
+    width: 100%;
+    border-radius: 4px;
+    color: #fff;
+}
+.driver_content table tbody tr td.transfer_name {
+    text-align: center;
+    font-size: 14px;
+}
+.driver_content table tbody tr td.transfer_name .name {
+    margin-bottom: 10px;
+}
+.driver_content table tbody tr td.vehicle .license_plate {
+    padding: 2px 5px; 
+    background: #e0e0e0; 
+    width: 100px;
+    margin: 0 auto;
+    border-radius: 4px;
+    color: rgba(0,0,0,0.87);
+    text-align: center;
+}
+
+.trips_driver_input {
+    border: none !important;
+    border-bottom: #eeeeee 1px solid !important;
+    height: 50px !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    width: 250px !important;
+}
+
+
+.form_input {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 20px;
+}
+.form_input {
+    border-radius: 0 !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+.form_input:focus {
+    outline: none !important;
+}
+.languages_driver{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.content .row input,
+.content .row select {
+    width: 100%;
+    background: none;
+    padding: 0 10px 8px 0;
+    border: none;
+    border-bottom: 1px solid #ddd !important;
+    outline: none;
+}
+.content .row label {
+    font-size: 13px;
+    color: rgba(0,0,0,0.54);
+}
+
+.content .row input:disabled,
+.content .row select:disabled {
+    color: #bbbbbb;
+}
+
+.content .row input:disabled+label,
+.content .row select:disabled+label {
+    color: #bbbbbb;
+}
+
+.cancel_offer_time {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.cancel_offer_time > div {
+    width: 100%;
+    margin-right: 5px;
+    position: relative;
+}
+
+.cancel_offer_time input {
+    padding-left: 30px !important;
+}
+
+.cancel_offer_time input::-webkit-inner-spin-button,
+.cancel_offer_time input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+}
+
+.cancel_offer_time input[type=number] {
+    -moz-appearance: textfield;
+  }
+
+.cancel_offer_time p {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-20%);
+}
+
+.save_button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.save_button button {
+    width: 120px;
+    border-radius: 20px;
+    border: none;
+    padding: 7px 20px;
+    background: #21ba45;
+    color: #fff;
+    -webkit-box-shadow: 0px 3px 8px -3px #000000; 
+    box-shadow: 0px 3px 8px -3px #000000;
+    transition: 200ms all;
+}
+.save_button button:hover {
+    background: #21ba45cc;
+}
+
+/*users*/
+
+.teams_content {
+    width: 100%;
+}
+
+.teams_content table {
+    width: 100%;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.2),0 2px 2px rgba(0,0,0,0.14),0 3px 1px -2px rgba(0,0,0,0.12);
+  }
+  
+  
+  .teams_content table thead {
+    border-bottom: 1px solid var(--line);
+  }
+  
+  .teams_content table th, .teams_content table td {
+    padding: 0.5rem 1rem;
+  }
+  
+  .teams_content .role_item {
+    width: max-content;
+    background: var(--lightgray);
+    padding: 3px 10px;
+    border: none;
+    border-radius: 1rem;
+  }
+  
+  .teams_content table td .role_item:not(:last-of-type) {
+    margin-bottom: 0.5rem;
+  }
+  
+  .teams_content table td .button_edit {
+    width: 100%;
+  }
+  
+  .teams_content .teams_table_mobile {
+    display: none;
+  }
+  
+  .teams_content .teams_table_mobile p {
+    margin-bottom: 0.5rem;
+  }
+
+
+.mobile_table_details {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+
+.manager_checkbox {
+    display: inline-flex;
+    flex-direction: row;
+    width: 180px;
+    align-items: center;
+    white-space: nowrap;
+    font-size: 18px !important;
+}
+
+.driver_checkbox {
+    display: inline-flex;
+    flex-direction: row;
+    width: 95px;
+    align-items: center;
+    white-space: nowrap;
+    font-size: 18px !important;
+}
+
+.file_upload_input {
+    width: 53% !important;
+}
+
+.file_upload_input label {
+    width: 100%;
+    border: #000000 1px solid;
+    height: 60px;
+    border-radius: 4px;
+    font-size: 18px !important;
+    display: inline-flex;
+    align-items: center;
+}
+
+.file_upload_input input {
+    visibility: hidden;
+}
+
+/*vehicle*/
+
+.vehicle_table td:not(:first-child),
+.vehicle_table th:not(:first-child) {
+    text-align: center;
+}
+
+.default_options {
+    margin-top: 20px;
+}
+
+
+.feature_buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature_buttons input {
+    visibility: hidden;
+}
+
+.feature_buttons label {
+    color: #000000;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 3px 8px -3px #000000; 
+    box-shadow: 0px 3px 8px -3px #000000;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: 100ms all;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    margin-right: 20px;
+    text-align: center;
+}
+.feature_buttons input:checked+label {
+    -webkit-box-shadow: 0px 3px 8px -3px #fff; 
+    box-shadow: 0px 3px 8px -3px #fff;
+    border: var(--main) 2px solid;
+    background: rgba(0, 80, 228, 0.116);
+}
+
+.feature_buttons input:checked+label i,
+.feature_buttons input:checked+label p {
+    color: var(--main) !important;
+}
+
+
+
+/*edit vehicle*/
+
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 30px !important;
+}
+
+.add_image {
+    width: 300px;
+}
+
+.add_image input {
+    visibility: hidden;
+    position: absolute;
+    width: 10px !important;
+}
+
+.add_image label {
+    width: 100%;
+    color: #21ba45;
+    background: #eeeeee;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 25px 25px;
+    align-items: center;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 3px 8px -3px #000000; 
+    box-shadow: 0px 3px 8px -3px #000000;
+    cursor: pointer;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    margin-right: 20px;
+    text-align: center;
+}
+
+.image {
+    background: #000000;
+    width: 300px;
+    height: 500px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.image img {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: auto;
+}
+
+.image_desc {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding: 20px;
+}
+
+.image_desc button {
+    background: #c10015;
+    padding: 5px 20px;
+    border: none;
+    color: #fff;
+    border-radius: 20px;
+}
+
+/*Mobile*/
+
+@media screen and (max-width: 1023px) {
+    .sidebar {
+        display: none !important;
+    }
+    table {
+        display: none;
+    }
+    .teams_content .teams_table {
+        display: none;
+    }
+    .teams_content .teams_table_mobile {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0.5rem 1rem;
+        border-radius: 1rem;
+        box-shadow: 0 1px 5px rgba(0,0,0,0.2),0 2px 2px rgba(0,0,0,0.14),0 3px 1px -2px rgba(0,0,0,0.12);
+    }
+    .teams_content .teams_table_mobile .mobile_table_edit {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-grow: 1;
+    }
+    .teams_content .teams_table_mobile .mobile_table_edit button i {
+        font-size: 1.5rem;
+    }
+    .form_input,
+    .roles.user_role,
+    .file_upload_input {
+        width: 100% !important;
+    }
+    .content p.information {
+        width: 98% !important;
+    }
+    .row {
+        padding: 25px 0 !important;
+    }
+}
+
+@media (max-width: 623px) {
+    .add_image {
+        margin-bottom: 20px;
+    }
+    .images {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 340px) {
+    .mobile_number {
+        margin-top: 30px !important;
+    }
+}
+@media (max-width: 280px) {
+    .mobile_number {
+        margin-top: 0 !important;
+    }
+    .mobile_user_name {
+        margin-top: 50px !important;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.driver_content,
+html,
+body {
+    height: 100%;
+}
+
+.sidebar {
+    width: 350px;
+    background: #eeeeee;
+    display: flex;
+    flex-direction: column;
+}
+.sidebar a {
+    width: 100%;
+    padding: 10px 0 10px 10px;
+    color: #000000;
+    text-decoration: none;
+    transition: 200ms all;
+}
+.sidebar a:hover {
+    color: #000000;
+    background-color: #0000001e;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+}
+
