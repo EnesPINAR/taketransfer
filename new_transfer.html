@@ -390,13 +390,16 @@
                                     <span>En az&nbsp;&nbsp;<p>₺246</p></span>
                                 </a>
                             </div>
-                            <div class="offer_price">
-                                <label data-toggle="collapse" data-target="#price_offering" aria-expanded="false" aria-controls="price_offering">
-                                    <input type="checkbox">Fiyat teklif edin
-                                </label>
-                                <div class="collapse" id="price_offering" aria-expanded="false">
-                                    <input type="number">
-                                </div>
+                            <div class="offer_price d-flex flex-column justify-content-start">
+                                    <div class="checkbox">
+                                        <label data-toggle="collapse" data-target="#offering_price">
+                                            <input type="checkbox" /> 
+                                            Offer a price
+                                        </label>
+                                    </div>
+                                    <div id="offering_price" aria-expanded="false" class="collapse">
+                                        <input type="number" min="0">
+                                    </div>
                             </div>
                             <div class="date_and_time">
                                 <div class="select_date">
@@ -428,11 +431,11 @@
                             <div class="comments">
                                 <div class="write_comment">
                                     <i class="bi bi-chat-text"></i>
-                                    <input type="text" name="comment_input[]" class="input_transparent" value="" placeholder="Yorum (Bagaj bilgileri v.b.)">
+                                    <input type="text" name="comment_input[]" class="input_transparent" id="comment_input" value="" placeholder="Yorum (Bagaj bilgileri v.b.)">
                                 </div>
                                 <div class="quick_comments">
-                                    <input type="button" class="button_quick_comment set_comment1" value="Wİ-Fİ'a ihtiyacım var."/>
-                                    <input type="button" class="button_quick_comment set_comment2" value="Türkçe konuşan şoföre ihtiyacım var."/>
+                                    <input type="button" class="button_quick_comment" value="Wİ-Fİ'a ihtiyacım var."/>
+                                    <input type="button" class="button_quick_comment" value="Türkçe konuşan şoföre ihtiyacım var."/>
                                 </div>
                             </div>
                             <div class="service_contract">
@@ -478,20 +481,35 @@
         </section>
     </div>
 
+    <div class="mobile_nav">
+        <a href="" class="mobile_nav_item">
+            <i class="bi bi-plus-lg"></i>
+            <p>Book</p>
+        </a>
+        <a href="" class="mobile_nav_item">
+            <i class="bi bi-pin-map"></i>
+            <p>Travels</p>
+        </a>
+        <a href="" class="mobile_nav_item">
+            <i class="bi bi-headset"></i>
+            <p>Support</p>
+        </a>
+        <a href="" class="mobile_nav_item">
+            <i class="bi bi-gear"></i>
+            <p>Settings</p>
+        </a>
+    </div>
+
     <!--JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
-        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
-        crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
         integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+        integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+        crossorigin="anonymous"></script>
 
         <script src="js/dropdown_nav.js"></script>
         <script src="js/dropdown_language.js"></script>

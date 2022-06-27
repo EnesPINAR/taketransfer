@@ -188,15 +188,15 @@
                     </div>
                     <div class="col-lg-4 col-md-4">
                         <div class="transfer_operations">
-                            <button class="button_transparent button_transfer_operation">
+                            <button class="btn button_transparent button_transfer_operation">
                                 <i class="bi bi-arrow-repeat"></i>
                                 Tekrar et
                             </button>
-                            <button class="button_transparent button_transfer_operation">
+                            <button class="btn button_transparent button_transfer_operation">
                                 <i class="bi bi-x-circle"></i>
                                 İptal et
                             </button>
-                            <button class="button_transparent button_transfer_operation d-flex text-nowrap">
+                            <button class="btn button_transparent button_transfer_operation d-flex text-nowrap">
                                 <i class="bi bi-info-circle"></i>
                                 Detaylar
                                 <i class="bi bi-chevron-down"></i>
@@ -263,7 +263,7 @@
                                         ₺ 100000
                                     </div>
                                     <div class="booking d-flex align-items-center justify-content-center col-lg-3 col-md-3 col-sm-12">
-                                        <button class="button_main">
+                                        <button class="button_main" data-bs-toggle="modal" data-bs-target="#booking">
                                             BOOK
                                         </button>
                                     </div>
@@ -274,6 +274,43 @@
                 </div>
             </div>
         </section>
+    </div>
+
+    <div class="modal fade" id="booking" tabindex="-1" aria-labelledby="booking_modal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="booking_modal">Secured Payment</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success">Pay</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mobile_nav">
+        <a href="" class="mobile_nav_item">
+            <i class="bi bi-plus-lg"></i>
+            <p>Book</p>
+        </a>
+        <a href="" class="mobile_nav_item">
+            <i class="bi bi-pin-map"></i>
+            <p>Travels</p>
+        </a>
+        <a href="" class="mobile_nav_item">
+            <i class="bi bi-headset"></i>
+            <p>Support</p>
+        </a>
+        <a href="" class="mobile_nav_item">
+            <i class="bi bi-gear"></i>
+            <p>Settings</p>
+        </a>
     </div>
 
     <!--JS-->

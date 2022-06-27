@@ -118,6 +118,540 @@
         </div>
       </header>
 
+      <section class="banner">
+        <h2 class="title_banner">Türkiye'de transferler için en iyi fiyatlar</h2>
+        <div class="tabs">
+          <button class="tab tablinks tab_transfer active" onclick="show_tab_content(event, 'tab_transfer_content')">
+            <i class="bi bi-bezier2"></i>
+            Transfer
+          </button>
+          <button class="tab tablinks tab_taxi" onclick="show_tab_content(event, 'tab_taxi_content')">
+            <i class="bi bi-box-seam"></i>
+            Teslimat
+          </button>
+          <button class="tab tablinks tab_perHour" onclick="show_tab_content(event, 'tab_perhour_content')">
+            <i class="bi bi-clock"></i>
+            Saatlik
+          </button>
+        </div>
+        <div id="tab_transfer_content" class="tab_content">
+          <div class="adress_inputs">
+            <div class="input_departure form-floating">
+              <input type="text" class="form-control" id="departure" placeholder="konum">
+              <label for="departure">konum</label>
+            </div>
+            <button class="switchText" onclick="switchText()"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+                <path
+                  d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z" />
+                <path fill-rule="evenodd"
+                  d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z" />
+              </svg></button>
+            <div class="input_arrival form-floating">
+              <input type="text" class="form-control" id="arrival" placeholder="konum">
+              <label for="arrival">konum</label>
+            </div>
+          </div>
+          <div class="pricing_input form-floating">
+            <input type="number" min="0" class="form-control" id="pricing" placeholder="Fiyat Teklif Edin">
+            <label for="pricing">Fiyat Teklif Edin</label>
+          </div>
+          <div class="select_car_type">
+            <a href="#">
+              <div class="car_type_mobile">Ekonomi</div>
+              <img src="images/economy_small.png" width="72" height="24" alt="">
+              <div class="car_type_info">
+                <div class="car_type">Ekonomi</div>
+                <div class="capacity">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                    class="bi bi-people-fill" viewBox="0 0 16 16">
+                    <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                    <path fill-rule="evenodd"
+                      d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z" />
+                    <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
+                  </svg>x3
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                    class="bi bi-briefcase-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z" />
+                    <path
+                      d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z" />
+                  </svg>x3
+                </div>
+              </div>
+              <hr>
+              <span>En az&nbsp;&nbsp;<p>₺246</p></span>
+            </a>
+            <a href="#">
+              <div class="car_type_mobile">Ekonomi</div>
+              <img src="images/economy_small.png" width="72" height="24" alt="">
+              <div class="car_type_info">
+                <div class="car_type">Ekonomi</div>
+                <div class="capacity">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                    class="bi bi-people-fill" viewBox="0 0 16 16">
+                    <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                    <path fill-rule="evenodd"
+                      d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z" />
+                    <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
+                  </svg>x3
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                    class="bi bi-briefcase-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z" />
+                    <path
+                      d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z" />
+                  </svg>x3
+                </div>
+              </div>
+              <hr>
+              <span>En az&nbsp;&nbsp;<p>₺246</p></span>
+            </a>
+            <a href="#">
+              <div class="car_type_mobile">Ekonomi</div>
+              <img src="images/economy_small.png" width="72" height="24" alt="">
+              <div class="car_type_info">
+                <div class="car_type">Ekonomi</div>
+                <div class="capacity">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                    class="bi bi-people-fill" viewBox="0 0 16 16">
+                    <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                    <path fill-rule="evenodd"
+                      d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z" />
+                    <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
+                  </svg>x3
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                    class="bi bi-briefcase-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z" />
+                    <path
+                      d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z" />
+                  </svg>x3
+                </div>
+              </div>
+              <hr>
+              <span>En az&nbsp;&nbsp;<p>₺246</p></span>
+            </a>
+            <a href="#">
+              <div class="car_type_mobile">Ekonomi</div>
+              <img src="images/economy_small.png" width="72" height="24" alt="">
+              <div class="car_type_info">
+                <div class="car_type">Ekonomi</div>
+                <div class="capacity">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                    class="bi bi-people-fill" viewBox="0 0 16 16">
+                    <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                    <path fill-rule="evenodd"
+                      d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z" />
+                    <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
+                  </svg>x3
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                    class="bi bi-briefcase-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z" />
+                    <path
+                      d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z" />
+                  </svg>x3
+                </div>
+              </div>
+              <hr>
+              <span>En az&nbsp;&nbsp;<p>₺246</p></span>
+            </a>
+            <a href="#">
+              <div class="car_type_mobile">Ekonomi</div>
+              <img src="images/economy_small.png" width="72" height="24" alt="">
+              <div class="car_type_info">
+                <div class="car_type">Ekonomi</div>
+                <div class="capacity">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                    class="bi bi-people-fill" viewBox="0 0 16 16">
+                    <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                    <path fill-rule="evenodd"
+                      d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z" />
+                    <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
+                  </svg>x3
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                    class="bi bi-briefcase-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z" />
+                    <path
+                      d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z" />
+                  </svg>x3
+                </div>
+              </div>
+              <hr>
+              <span>En az&nbsp;&nbsp;<p>₺246</p></span>
+            </a>
+            <a href="#">
+              <div class="car_type_mobile">Ekonomi</div>
+              <img src="images/economy_small.png" width="72" height="24" alt="">
+              <div class="car_type_info">
+                <div class="car_type">Ekonomi</div>
+                <div class="capacity">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                    class="bi bi-people-fill" viewBox="0 0 16 16">
+                    <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                    <path fill-rule="evenodd"
+                      d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z" />
+                    <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
+                  </svg>x3
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                    class="bi bi-briefcase-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z" />
+                    <path
+                      d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z" />
+                  </svg>x3
+                </div>
+              </div>
+              <hr>
+              <span>En az&nbsp;&nbsp;<p>₺246</p></span>
+            </a>
+            <a href="#">
+              <div class="car_type_mobile">Ekonomi</div>
+              <img src="images/economy_small.png" width="72" height="24" alt="">
+              <div class="car_type_info">
+                <div class="car_type">Ekonomi</div>
+                <div class="capacity">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                    class="bi bi-people-fill" viewBox="0 0 16 16">
+                    <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                    <path fill-rule="evenodd"
+                      d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z" />
+                    <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
+                  </svg>x3
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                    class="bi bi-briefcase-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z" />
+                    <path
+                      d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z" />
+                  </svg>x3
+                </div>
+              </div>
+              <hr>
+              <span>En az&nbsp;&nbsp;<p>₺246</p></span>
+            </a>
+            <a href="#">
+              <div class="car_type_mobile">Ekonomi</div>
+              <img src="images/economy_small.png" width="72" height="24" alt="">
+              <div class="car_type_info">
+                <div class="car_type">Ekonomi</div>
+                <div class="capacity">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                    class="bi bi-people-fill" viewBox="0 0 16 16">
+                    <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                    <path fill-rule="evenodd"
+                      d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z" />
+                    <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
+                  </svg>x3
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                    class="bi bi-briefcase-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z" />
+                    <path
+                      d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z" />
+                  </svg>x3
+                </div>
+              </div>
+              <hr>
+              <span>En az&nbsp;&nbsp;<p>₺246</p></span>
+            </a>
+            <a href="#">
+              <div class="car_type_mobile">Ekonomi</div>
+              <img src="images/economy_small.png" width="72" height="24" alt="">
+              <div class="car_type_info">
+                <div class="car_type">Ekonomi</div>
+                <div class="capacity">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                    class="bi bi-people-fill" viewBox="0 0 16 16">
+                    <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                    <path fill-rule="evenodd"
+                      d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z" />
+                    <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
+                  </svg>x3
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                    class="bi bi-briefcase-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z" />
+                    <path
+                      d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z" />
+                  </svg>x3
+                </div>
+              </div>
+              <hr>
+              <span>En az&nbsp;&nbsp;<p>₺246</p></span>
+            </a>
+          </div>
+          <button class="get_offer">TEKLIFLERI AL</button>
+        </div>
+        <div id="tab_taxi_content" class="tab_content">
+          <div class="adress_inputs">
+            <div class="input_departure form-floating">
+              <input type="text" class="form-control" id="departure" placeholder="konum">
+              <label for="departure">konum</label>
+              <button class="clear_input" onclick="document.getElementById('departure').value = ''">X</button>
+            </div>
+            <button class="switchText" onclick="switchText()"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+                <path
+                  d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z" />
+                <path fill-rule="evenodd"
+                  d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z" />
+              </svg></button>
+            <div class="input_arrival form-floating">
+              <input type="text" class="form-control" id="arrival" placeholder="konum">
+              <label for="arrival">konum</label>
+            </div>
+          </div>
+          <div class="pricing_input form-floating">
+            <input type="number" class="form-control" id="pricing" placeholder="Fiyat Teklif Edin">
+            <label for="pricing">Fiyat Teklif Edin</label>
+          </div>
+          <button class="get_offer">TEKLİFLERİ ALIN</button>
+        </div>
+        <div id="tab_perhour_content" class="tab_content">
+          <div class="adress_inputs">
+            <div class="input_departure form-floating">
+              <input type="text" class="form-control" id="departure" placeholder="konum">
+              <label for="departure">konum</label>
+            </div>
+          </div>
+          <div class="pricing_input form-floating">
+            <input type="number" class="form-control" id="pricing" placeholder="Fiyat Teklif Edin">
+            <label for="pricing">Fiyat Teklif Edin</label>
+          </div>
+          <div class="select_car_type">
+            <a href="#">
+              <div class="car_type_mobile">Ekonomi</div>
+              <img src="images/economy_small.png" width="72" height="24" alt="">
+              <div class="car_type_info">
+                <div class="car_type">Ekonomi</div>
+                <div class="capacity">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                    class="bi bi-people-fill" viewBox="0 0 16 16">
+                    <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                    <path fill-rule="evenodd"
+                      d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z" />
+                    <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
+                  </svg>x3
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                    class="bi bi-briefcase-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z" />
+                    <path
+                      d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z" />
+                  </svg>x3
+                </div>
+              </div>
+              <hr>
+              <span>En az&nbsp;&nbsp;<p>₺246</p></span>
+            </a>
+            <a href="#">
+              <div class="car_type_mobile">Ekonomi</div>
+              <img src="images/economy_small.png" width="72" height="24" alt="">
+              <div class="car_type_info">
+                <div class="car_type">Ekonomi</div>
+                <div class="capacity">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                    class="bi bi-people-fill" viewBox="0 0 16 16">
+                    <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                    <path fill-rule="evenodd"
+                      d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z" />
+                    <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
+                  </svg>x3
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                    class="bi bi-briefcase-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z" />
+                    <path
+                      d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z" />
+                  </svg>x3
+                </div>
+              </div>
+              <hr>
+              <span>En az&nbsp;&nbsp;<p>₺246</p></span>
+            </a>
+            <a href="#">
+              <div class="car_type_mobile">Ekonomi</div>
+              <img src="images/economy_small.png" width="72" height="24" alt="">
+              <div class="car_type_info">
+                <div class="car_type">Ekonomi</div>
+                <div class="capacity">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                    class="bi bi-people-fill" viewBox="0 0 16 16">
+                    <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                    <path fill-rule="evenodd"
+                      d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z" />
+                    <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
+                  </svg>x3
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                    class="bi bi-briefcase-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z" />
+                    <path
+                      d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z" />
+                  </svg>x3
+                </div>
+              </div>
+              <hr>
+              <span>En az&nbsp;&nbsp;<p>₺246</p></span>
+            </a>
+            <a href="#">
+              <div class="car_type_mobile">Ekonomi</div>
+              <img src="images/economy_small.png" width="72" height="24" alt="">
+              <div class="car_type_info">
+                <div class="car_type">Ekonomi</div>
+                <div class="capacity">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                    class="bi bi-people-fill" viewBox="0 0 16 16">
+                    <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                    <path fill-rule="evenodd"
+                      d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z" />
+                    <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
+                  </svg>x3
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                    class="bi bi-briefcase-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z" />
+                    <path
+                      d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z" />
+                  </svg>x3
+                </div>
+              </div>
+              <hr>
+              <span>En az&nbsp;&nbsp;<p>₺246</p></span>
+            </a>
+            <a href="#">
+              <div class="car_type_mobile">Ekonomi</div>
+              <img src="images/economy_small.png" width="72" height="24" alt="">
+              <div class="car_type_info">
+                <div class="car_type">Ekonomi</div>
+                <div class="capacity">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                    class="bi bi-people-fill" viewBox="0 0 16 16">
+                    <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                    <path fill-rule="evenodd"
+                      d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z" />
+                    <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
+                  </svg>x3
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                    class="bi bi-briefcase-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z" />
+                    <path
+                      d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z" />
+                  </svg>x3
+                </div>
+              </div>
+              <hr>
+              <span>En az&nbsp;&nbsp;<p>₺246</p></span>
+            </a>
+            <a href="#">
+              <div class="car_type_mobile">Ekonomi</div>
+              <img src="images/economy_small.png" width="72" height="24" alt="">
+              <div class="car_type_info">
+                <div class="car_type">Ekonomi</div>
+                <div class="capacity">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                    class="bi bi-people-fill" viewBox="0 0 16 16">
+                    <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                    <path fill-rule="evenodd"
+                      d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z" />
+                    <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
+                  </svg>x3
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                    class="bi bi-briefcase-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z" />
+                    <path
+                      d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z" />
+                  </svg>x3
+                </div>
+              </div>
+              <hr>
+              <span>En az&nbsp;&nbsp;<p>₺246</p></span>
+            </a>
+            <a href="#">
+              <div class="car_type_mobile">Ekonomi</div>
+              <img src="images/economy_small.png" width="72" height="24" alt="">
+              <div class="car_type_info">
+                <div class="car_type">Ekonomi</div>
+                <div class="capacity">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                    class="bi bi-people-fill" viewBox="0 0 16 16">
+                    <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                    <path fill-rule="evenodd"
+                      d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z" />
+                    <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
+                  </svg>x3
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                    class="bi bi-briefcase-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z" />
+                    <path
+                      d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z" />
+                  </svg>x3
+                </div>
+              </div>
+              <hr>
+              <span>En az&nbsp;&nbsp;<p>₺246</p></span>
+            </a>
+            <a href="#">
+              <div class="car_type_mobile">Ekonomi</div>
+              <img src="images/economy_small.png" width="72" height="24" alt="">
+              <div class="car_type_info">
+                <div class="car_type">Ekonomi</div>
+                <div class="capacity">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                    class="bi bi-people-fill" viewBox="0 0 16 16">
+                    <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                    <path fill-rule="evenodd"
+                      d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z" />
+                    <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
+                  </svg>x3
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                    class="bi bi-briefcase-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z" />
+                    <path
+                      d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z" />
+                  </svg>x3
+                </div>
+              </div>
+              <hr>
+              <span>En az&nbsp;&nbsp;<p>₺246</p></span>
+            </a>
+            <a href="#">
+              <div class="car_type_mobile">Ekonomi</div>
+              <img src="images/economy_small.png" width="72" height="24" alt="">
+              <div class="car_type_info">
+                <div class="car_type">Ekonomi</div>
+                <div class="capacity">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                    class="bi bi-people-fill" viewBox="0 0 16 16">
+                    <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                    <path fill-rule="evenodd"
+                      d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z" />
+                    <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
+                  </svg>x3
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                    class="bi bi-briefcase-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z" />
+                    <path
+                      d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z" />
+                  </svg>x3
+                </div>
+              </div>
+              <hr>
+              <span>En az&nbsp;&nbsp;<p>₺246</p></span>
+            </a>
+          </div>
+          <button class="get_offer">TEKLİFLERİ ALIN</button>
+        </div>
+      </section>
+
     <div class="container">
         <div class="how-to">
             <h2>Nasıl transfer siparişi verebilirim?</h2>
@@ -135,6 +669,25 @@
                 <p>Lorem ipsum dolor sit amet.</p>
             </div>
         </div>
+    </div>
+
+    <div class="mobile_nav">
+      <a href="" class="mobile_nav_item">
+        <i class="bi bi-plus-lg"></i>
+        <p>Book</p>
+      </a>
+      <a href="" class="mobile_nav_item">
+        <i class="bi bi-pin-map"></i>
+        <p>Travels</p>
+      </a>
+      <a href="" class="mobile_nav_item">
+        <i class="bi bi-headset"></i>
+        <p>Support</p>
+      </a>
+      <a href="" class="mobile_nav_item">
+        <i class="bi bi-gear"></i>
+        <p>Settings</p>
+      </a>
     </div>
 
 <!--JS-->

@@ -1,6 +1,5 @@
-$('.set_comment1').on('click', function(e) {
+$('.button_quick_comment').on('click', function(e) {
     e.preventDefault();
-    var elem = $(this).parent().find('input[name=comment_input\\[\\]]');
-
-    elem.val( elem.val() + 'add this' );
+    $("#comment_input").val($("#comment_input").val() + e.target.value+" ")
+    e.target.remove()
 });

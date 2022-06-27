@@ -115,6 +115,10 @@ li {
 }
 
 /*Buttons*/
+button:focus {
+    box-shadow: none !important;
+}
+
 .button_transparent {
     background: transparent;
     border: none;
@@ -1683,6 +1687,21 @@ a.transfer_box_mobile:hover {
     display: none;
 }
 
+.transfer_all_details .transfer_detail_item {
+    border-bottom: 1px solid var(--secondary);
+    border-style: none none dashed none;
+}
+
+.transfer_all_details .transfer_detail_icon {
+    display: grid;
+    place-items: center;
+    margin-right: 1rem;
+}
+
+.transfer_all_details .transfer_detail_icon i {
+    font-size: 1.5rem;
+}
+
 /*Mobile nav*/
 .mobile_nav {
     display: none;
@@ -2007,6 +2026,24 @@ a.transfer_box_mobile:hover {
         position: absolute;
         top: 0;
         right: 0;
+    }
+
+    .all_offers .mobile_transfer_operations_button .btn {
+        padding: 1px 6px;
+    }
+
+    .all_offers .mobile_transfer_operations_button .btn::after {
+        display: none;
+    }
+
+    .all_offers .dropdown-menu li button {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .all_offers .dropdown-menu li button i {
+        margin-right: 1rem;
     }
 
     .all_offers .transfer_date_time p,
